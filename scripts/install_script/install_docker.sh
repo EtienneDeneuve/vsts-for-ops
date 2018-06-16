@@ -24,12 +24,12 @@ if [ $updatedocker -eq 1 ]; then
   echo "Installing Docker engine"
   echo ""
   apt-get update \
-    && apt-get install -y apt-transport-https ca-certificates linux-image-extra-$(uname -r) linux-image-extra-virtual 
+    && apt-get install -y apt-transport-https ca-certificates linux-image-extra-$(uname -r) linux-image-extra-virtual
     curl -fsSL https: //download.docker.com/linux/ubuntu/gpg | sudo apt-key add -quiet -
     add-apt-repository -y -u  "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-  
 
-    apt-get update 
+
+    apt-get update
     apt-get update -y -q
     apt-get install -y -q docker-ce
     apt-get clean && apt-get purge \

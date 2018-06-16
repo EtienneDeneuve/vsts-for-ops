@@ -34,7 +34,7 @@ mysql -u root -proot -e "use mysql; UPDATE user SET authentication_string=PASSWO
 
 echo "Creating DB Users and granting privileges with already collected information...\n"
 
-mysql -u root -p$inputpasswd <<MYSQL_SCRIPT 
+mysql -u root -p$inputpasswd <<MYSQL_SCRIPT
 CREATE DATABASE $DBNAME DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 GRANT ALL ON $DBNAME.* TO '$DBPROJECTUSER'@'$DBHOSTALLOW' IDENTIFIED BY '$DBPROJECTPWD';
 FLUSH PRIVILEGES;
